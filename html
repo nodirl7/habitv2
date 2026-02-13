@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task & Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Сегодня</h1>
+    <input type="date" id="datePicker" />
+  </header>
+
+  <main>
+    <section id="tasks"></section>
+  </main>
+
+  <button id="addBtn">＋</button>
+
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <h2>Новая задача</h2>
+
+      <input id="titleInput" placeholder="Заголовок" />
+      <textarea id="descInput" placeholder="Описание (необязательно)"></textarea>
+
+      <select id="priorityInput">
+        <option value="">Без приоритета</option>
+        <option value="high">Высокий</option>
+        <option value="medium">Средний</option>
+        <option value="low">Низкий</option>
+      </select>
+
+      <label class="checkbox">
+        <input type="checkbox" id="dailyInput" />
+        Ежедневная
+      </label>
+
+      <div class="actions">
+        <button id="saveBtn">Сохранить</button>
+        <button id="cancelBtn">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
